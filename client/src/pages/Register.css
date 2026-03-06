@@ -1,0 +1,207 @@
+/* 现代化注册界面 */
+.register-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 动态背景装饰 */
+.register-container::before {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  top: -200px;
+  right: -200px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.register-container::after {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  bottom: -150px;
+  left: -150px;
+  animation: float 8s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
+}
+
+.register-box {
+  width: 450px;
+  max-width: 90%;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 60px 50px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+  animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.register-header h1 {
+  color: #2d3748;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.register-header p {
+  color: #718096;
+  font-size: 16px;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* 输入框样式 */
+.register-input {
+  background: #f7fafc !important;
+  border: 2px solid #e2e8f0 !important;
+  border-radius: 12px !important;
+  height: 56px !important;
+  font-size: 16px !important;
+  transition: all 0.3s ease !important;
+}
+
+.register-input:hover {
+  background: #ffffff !important;
+  border-color: #cbd5e0 !important;
+}
+
+.register-input:focus,
+.register-input-focused {
+  background: #ffffff !important;
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1) !important;
+}
+
+.register-input input {
+  background: transparent !important;
+  color: #2d3748 !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.register-input input::placeholder {
+  color: #a0aec0 !important;
+  font-size: 15px !important;
+}
+
+.register-input .anticon {
+  color: #a0aec0;
+  font-size: 20px;
+}
+
+.register-input:focus .anticon,
+.register-input-focused .anticon {
+  color: #667eea;
+}
+
+/* 注册按钮 */
+.register-button {
+  height: 56px !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  border: none !important;
+  border-radius: 12px !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  margin-top: 32px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3) !important;
+  letter-spacing: 0.5px;
+}
+
+.register-button:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4) !important;
+}
+
+.register-button:active {
+  transform: translateY(0) !important;
+}
+
+/* 底部链接 */
+.register-footer {
+  text-align: center;
+  margin-top: 32px;
+  color: #718096;
+  font-size: 15px;
+}
+
+.register-footer a {
+  color: #667eea;
+  margin-left: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.register-footer a:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+/* 表单项间距 */
+.ant-form-item {
+  margin-bottom: 24px !important;
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+  .register-box {
+    padding: 50px 35px;
+  }
+  
+  .register-header h1 {
+    font-size: 30px;
+  }
+  
+  .register-input {
+    height: 52px !important;
+  }
+  
+  .register-button {
+    height: 52px !important;
+    font-size: 17px !important;
+  }
+}

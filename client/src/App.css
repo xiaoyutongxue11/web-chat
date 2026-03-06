@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #020617;
+  color: #e2e8f0;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Ant Design 深色主题覆盖 */
+.ant-input,
+.ant-input-password {
+  background: #1e293b !important;
+  border-color: #334155 !important;
+  color: #e2e8f0 !important;
+}
+
+.ant-input::placeholder,
+.ant-input-password input::placeholder {
+  color: #64748b !important;
+}
+
+.ant-input:hover,
+.ant-input:focus,
+.ant-input-password:hover,
+.ant-input-password:focus {
+  border-color: #38bdf8 !important;
+}
+
+.ant-btn-primary {
+  background: #38bdf8 !important;
+  border-color: #38bdf8 !important;
+}
+
+.ant-btn-primary:hover {
+  background: #0ea5e9 !important;
+  border-color: #0ea5e9 !important;
+}
+
+.ant-form-item-explain-error {
+  color: #ef4444 !important;
+}
+
+.ant-message {
+  z-index: 9999;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
